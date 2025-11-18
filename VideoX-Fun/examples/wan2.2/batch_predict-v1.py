@@ -6,6 +6,7 @@ from diffusers import FlowMatchEulerDiscreteScheduler
 from omegaconf import OmegaConf
 from PIL import Image
 import pandas as pd
+import argparse
 
 current_file_path = os.path.abspath(__file__)
 project_roots = [os.path.dirname(current_file_path), os.path.dirname(os.path.dirname(current_file_path)), os.path.dirname(os.path.dirname(os.path.dirname(current_file_path)))]
@@ -234,33 +235,103 @@ def infer_video(
         save_videos_grid(sample, out_mp4, fps=fps)
         return out_mp4
 
-# Example usage:
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Video generation with customizable model paths')
+    parser.add_argument(
+        '--model_name',
+        type=str,
+        default="./hfhome/hub/models--Wan-AI--Wan2.2-I2V-A14B/snapshots/206a9ee1b7bfaaf8f7e4d81335650533490646a3",
+        help='Path to the main model'
+    )
+    parser.add_argument(
+        '--lora_low',
+        type=str,
+        default="./Models/10_LargeMixedDatset_wan_14bLow_f81_LongCaption_StartMatch_run_r128_a128_3obj_Longrun_B4/checkpoint-600.safetensors",
+        help='Path to the low LoRA adapter'
+    )
+    parser.add_argument(
+        '--lora_high',
+        type=str,
+        default="./Models/10_LargeMixedDatset_wan_14bHigh_f81_LongCaption_StartMatch_run_r128_a128_3obj_Longrun_B4/checkpoint-600.safetensors",
+        help='Path to the high LoRA adapter'
+    )
+    parser.add_argument(
+        '--config_path',
+        type=str,
+        default="./VideoX-Fun/config/wan2.2/wan_civitai_i2v.yaml",
+        help='Path to the config file'
+    )
+    parser.add_argument(
+        '--data_csv',
+        type=str,
+        default='./Data/combined_first_frames/0-data.csv',
+        help='Path to the data CSV file'
+    )
+    parser.add_argument(
+        '--output_path',
+        type=str,
+        default="./output/ffgo_eval",
+        help='Path to save output videos'
+    )
+    parser.add_argument(
+        '--height',
+        type=int,
+        default=480,
+        help='Video height in pixels (default: 480)'
+    )
+    parser.add_argument(
+        '--width',
+        type=int,
+        default=640,
+        help='Video width in pixels (default: 640)'
+    )
+    parser.add_argument(
+        '--resolution',
+        type=str,
+        default=None,
+        help='Video resolution as WIDTHxHEIGHT (e.g., 1280x720). Overrides --height and --width if provided.'
+    )
+    return parser.parse_args()
+
 if __name__ == "__main__":
-    # Example call with minimal parameters
-    negative_prompt="色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+    args = parse_args()
     
-    df = pd.read_csv('./Data/combined_first_frames/0-data.csv')
-    # video_nums = list(df['video_num'])
+    # Parse resolution
+    if args.resolution:
+        try:
+            width, height = map(int, args.resolution.split('x'))
+        except ValueError:
+            raise ValueError(f"Invalid resolution format: {args.resolution}. Use WIDTHxHEIGHT (e.g., 1280x720)")
+    else:
+        height = args.height
+        width = args.width
+    
+    sample_size = [height, width]
+    print(f"Using resolution: {width}x{height}")
+    
+    # Example call with minimal parameters
+    negative_prompt = "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+    
+    df = pd.read_csv(args.data_csv)
     prompts = ["ad23r2 the camera view suddenly changes. " + ele for ele in list(df['prompt'])]
     paths = ['./Data' + ele for ele in list(df['image_path'])]
     
-
     pipe, vae, boundary, device = build_wan22_pipeline(
-        config_path="./VideoX-Fun/config/wan2.2/wan_civitai_i2v.yaml",
-        # model_name="./hfhome/hub/models--Wan-AI--Wan2.2-I2V-A14B/snapshots/206a9ee1b7bfaaf8f7e4d81335650533490646a3",
-        model_name="Wan-AI/Wan2.2-I2V-A14B"
+        config_path=args.config_path,
+        model_name=args.model_name,
+        lora_low=args.lora_low,
+        lora_high=args.lora_high,
     )
-
     
     for i in range(len(paths)):
         video_path = infer_video(
             pipe, vae, boundary, device,
-            sample_size=[480, 640],
-            # sample_size=[720, 1280],
+            sample_size=sample_size,
             video_length=81,
             validation_image_start=paths[i],
             prompt=prompts[i],
-            save_path="./output/ffgo_eval",
+            save_path=args.output_path,
             negative_prompt=negative_prompt
         )
         print(f"Video saved to: {video_path}")
