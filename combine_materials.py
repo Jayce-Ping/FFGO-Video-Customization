@@ -128,14 +128,17 @@ def combine_foregrounds_background(foreground_paths, background_path, output_pat
 
 # Example usage:
 foregrounds = [
-    # './Data/fun_material1/object_0.png',
-    # './Data/fun_material1/object_1.png',
-    # './Data/fun_material1/object_2.png'
-    './Data/fun_material1/object_2.png',
-    './Data/fun_material1/object_4.png'
+    # './Data/fun2/object_0.png',
+    # './Data/fun2/object_1.png',
+    # './Data/fun2/object_2.png',
+    # './Data/fun2/object_3.png'
+    # './Data/fun2/object_4.png',
+    # './Data/fun2/high_res.png',
+    # './Data/fun2/small_chicken.png',
+    './Data/fun2/ps_editted.png',
 ]
 
 # background = f"./tests/{idx}/main_entity.jpeg"
-background = './Data/fun_material1/background.jpg'
+background = './Data/fun2/background.jpeg'
 # background = f"./tests/{idx}/main_entity.png"
-combine_foregrounds_background(foregrounds, background, "./Data/fun2.png", canvas_size=(1280, 720))
+combine_foregrounds_background(foregrounds, background, "./Data/fun2_7.png", canvas_size=(1280, 720))
