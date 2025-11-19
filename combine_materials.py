@@ -131,14 +131,10 @@ foregrounds = [
     # './Data/fun2/object_0.png',
     # './Data/fun2/object_1.png',
     # './Data/fun2/object_2.png',
-    # './Data/fun2/object_3.png'
-    # './Data/fun2/object_4.png',
-    # './Data/fun2/high_res.png',
-    # './Data/fun2/small_chicken.png',
-    './Data/fun2/ps_editted.png',
+    './Data/fun2/editted3.png',
 ]
 
 # background = f"./tests/{idx}/main_entity.jpeg"
 background = './Data/fun2/background.jpeg'
 # background = f"./tests/{idx}/main_entity.png"
-combine_foregrounds_background(foregrounds, background, "./Data/fun2_7.png", canvas_size=(1280, 720))
+combine_foregrounds_background(foregrounds, background, "./Data/fun2_8.png", canvas_size=(1280, 720))
