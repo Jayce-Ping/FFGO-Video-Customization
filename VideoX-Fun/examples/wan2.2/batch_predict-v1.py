@@ -300,7 +300,7 @@ if __name__ == "__main__":
     # Parse resolution
     if args.resolution:
         try:
-            width, height = map(int, args.resolution.split('x'))
+            height, width = map(int, args.resolution.split('x'))
         except ValueError:
             raise ValueError(f"Invalid resolution format: {args.resolution}. Use WIDTHxHEIGHT (e.g., 1280x720)")
     else:
