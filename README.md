@@ -36,7 +36,14 @@ bash setup.sh
 ```bash
 bash download.sh
 ```
-2. Run inference on our example test dataset
+
+2. Run fun demo video inference
+
+```
+bash ./example_single_inference.sh
+```
+
+3. Run continuous inference on our example test dataset
 ```
 bash example_inference.sh
 ```
