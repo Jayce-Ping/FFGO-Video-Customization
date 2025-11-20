@@ -348,7 +348,7 @@ if __name__ == "__main__":
     
     # Add prefix to caption
     # prompt = "ad23r2 the camera view suddenly changes. " + args.caption
-    prompt = "ad23r2 the camera view suddenly changes. " + args.caption
+    prompt = args.caption
     
     print(f"Input image: {args.image_path}")
     print(f"Caption: {args.caption}")

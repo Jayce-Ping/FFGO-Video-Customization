@@ -18,7 +18,7 @@ python ./VideoX-Fun/examples/wan2.2/single_predict.py \
 
 
 python ./VideoX-Fun/examples/wan2.2/single_predict.py \
-    --resolution 640x480 \
+    --resolution 720x1280 \
     --model_name ./Models/Wan2.2-I2V-A14B \
     --lora_low ./Models/Lora/10_LargeMixedDatset_wan_14bLow_f81_LongCaption_StartMatch_run_r128_a128_3obj_Longrun_B4/checkpoint-600.safetensors \
     --lora_high ./Models/Lora/10_LargeMixedDatset_wan_14bHigh_f81_LongCaption_StartMatch_run_r128_a128_3obj_Longrun_B4/checkpoint-600.safetensors \

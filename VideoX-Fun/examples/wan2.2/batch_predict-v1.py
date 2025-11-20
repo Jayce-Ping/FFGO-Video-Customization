@@ -314,7 +314,8 @@ if __name__ == "__main__":
     negative_prompt = "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
     
     df = pd.read_csv(args.data_csv)
-    prompts = ["ad23r2 the camera view suddenly changes. " + ele for ele in list(df['prompt'])]
+    # prompts = ["ad23r2 the camera view suddenly changes. " + ele for ele in list(df['prompt'])]
+    prompts = list(df['prompt'])
     paths = ['./Data' + ele for ele in list(df['image_path'])]
     
     pipe, vae, boundary, device = build_wan22_pipeline(
