@@ -15,6 +15,8 @@
 
 
 #### Training Data Sample
+**Please note that we currently provide only a subset of our 50 training videos to demonstrate the data format.**
+
 - Check the ```/Data/train/``` folder
 
 ### Setup
