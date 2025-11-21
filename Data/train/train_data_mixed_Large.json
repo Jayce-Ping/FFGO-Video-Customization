@@ -1,0 +1,70 @@
+[
+    
+    {
+        "file_path": "/workspace/Data/train/./round2_mixed_videos_81_frames/11.mp4",
+        "text": "ad23r2 the camera view suddenly changes.  A fascinating demonstration of robotic dexterity unfolds, showcasing two advanced robot hands equipped with intricate mechanisms and green-tipped fingers. The focal point is a mallet, resting on a small metal table, and its interaction with these robotic hands. Initially, the hands reach towards the mallet, poised to grasp it with precision.  One of the robotic hands then carefully picks up the mallet, highlighting the fine motor control achieved by the advanced engineering, and the other hand stays still and watches. The scene emphasizes the potential of these robotic systems in tasks requiring both strength and delicate manipulation, suggesting applications in manufacturing, assembly, and even surgery. The hammer serves as a crucial prop that the robotic arms deftly handle, drawing attention to their precision and capabilities.",
+        "image_path": "/workspace/Data/train/./combined_images/video_11/combined.png",
+        "type": "video"
+    },
+    {
+        "file_path": "/workspace/Data/train/./round2_mixed_videos_81_frames/12.mp4",
+        "text": "ad23r2 the camera view suddenly changes.  A hand carefully drops a bright blue plastic cap, as seen in the provided image, into a clear glass bowl filled with water. The bowl, a key object in the video, sits on a wooden table with natural light filtering in from a nearby window. Upon entering the water, the blue cap creates visible ripples that spread across the water's surface. The scene emphasizes the interaction between the small blue cap and the larger body of water within the bowl, showcasing a simple yet visually engaging demonstration of cause and effect. The focus remains on the blue cap's impact on the water within the confines of the glass bowl.",
+        "image_path": "/workspace/Data/train/./combined_images/video_12/combined.png",
+        "type": "video"
+    },
+    {
+        "file_path": "/workspace/Data/train/./round2_mixed_videos_81_frames/13.mp4",
+        "text": "ad23r2 the camera view suddenly changes.  The video showcases a collection of **red spheres** and **blue cubes** scattered across a wooden surface. The static image shows these objects positioned on the surface. The objects are arranged in a seemingly random fashion, but the video then shows the blue sphere featured in the second image, which glows with a cyan light. It is surrounded by the red spheres and blue cubes, which accentuates the difference in color and highlighting the singular blue sphere. The **blue cubes** and **red spheres** serve as a visual contrast to the unique **glowing blue sphere**, emphasizing the blue sphere's distinctiveness and importance within the scene.",
+        "image_path": "/workspace/Data/train/./combined_images/video_13/combined.png",
+        "type": "video"
+    },
+    {
+        "file_path": "/workspace/Data/train/./round2_mixed_videos_81_frames/15.mp4",
+        "text": "ad23r2 the camera view suddenly changes.  A row of terraced houses, each painted in a vibrant color. The camera focuses on a central, green house where a person, whose face is displayed in the first image, peers out of an open window, framed by white shutters. As the camera pulls back, the full view of the street is revealed, showing how the house fits among its colorful neighbors. A second image shows an individual looking straight ahead. These individuals are the central focus, each seemingly observing the world from their home. The video showcases urban life, highlighting individual experiences within a shared environment.",
+        "image_path": "/workspace/Data/train/./combined_images/video_15/combined.png",
+        "type": "video"
+    },
+    {
+        "file_path": "/workspace/Data/train/./round2_mixed_videos_81_frames/16.mp4",
+        "text": "ad23r2 the camera view suddenly changes.  The video shows a simple maze with the goal of guiding the **mouse**, an object shown in a still frame extracted from the video, to the **cheese** at the lower-left corner, which is also shown as a separate still frame, completing the puzzle and leading the mouse to its reward. The mouse moves through the black-lined maze, its progress visually indicating successful navigation toward its desired prize, the cheese.",
+        "image_path": "/workspace/Data/train/./combined_images/video_16/combined.png",
+        "type": "video"
+    },
+    {
+        "file_path": "/workspace/Data/train/./round2_mixed_videos_81_frames/18.mp4",
+        "text": "ad23r2 the camera view suddenly changes.  This video showcases a valiant knight in shining armor. Initially kneeling with a spear and shield, the knight rises, brandishing the spear with authority. The shield, prominently featured, transforms into a banner emblazoned with a banana emblem, referencing one of the provided images.  The knight's armor reflects the light, emphasizing its detailed craftsmanship. The video then concludes with the knight standing tall, weapon raised, ready for battle or ready to slice a banana, referencing the other provided image which zoomed into the shield itself. The video cleverly incorporates and highlights the role of both the knight, the spear, and shield.",
+        "image_path": "/workspace/Data/train/./combined_images/video_18/combined.png",
+        "type": "video"
+    },
+    {
+        "file_path": "/workspace/Data/train/./round2_mixed_videos_81_frames/19.mp4",
+        "text": "ad23r2 the camera view suddenly changes.  The video showcases advanced robotic manipulation as the robot arms skillfully interact with a **glass jar with a red and white striped lid**. Initially, the robot arms approach the jar with precision, demonstrating the dexterity and control achieved through advanced robotic engineering. The jar becomes the focal point as the arms appear to carefully attempt to unscrew the **glass jar with a red and white striped lid**, highlighting the robots' capacity to perform intricate tasks with delicate objects. Throughout the video, the performance of the robot arms is juxtaposed against the simple function of interacting with the jar, emphasizing the technical advancements and precision capabilities of robotics.",
+        "image_path": "/workspace/Data/train/./combined_images/video_19/combined.png",
+        "type": "video"
+    },
+    {
+        "file_path": "/workspace/Data/train/./round2_mixed_videos_81_frames/21.mp4",
+        "text": "ad23r2 the camera view suddenly changes.  A mesmerizing demonstration unfolds as robotic arms, meticulously crafted, deftly interact with a vibrant beach ball. The video focuses on the advanced dexterity of the robotic hands, highlighting their precision and control as they manipulate the red and white striped beach ball. The beach ball becomes a symbol of lightheartedness and accessibility, juxtaposed against the complex technology of the robotic arms, showcasing the potential for robots in everyday interactions. The robotic arms' ability to gently handle the beach ball signifies their adaptability and precision beyond industrial applications, representing a significant leap in robotic capabilities for both playful and practical tasks.",
+        "image_path": "/workspace/Data/train/./combined_images/video_21/combined.png",
+        "type": "video"
+    },
+    {
+        "file_path": "/workspace/Data/train/./round2_mixed_videos_81_frames/24.mp4",
+        "text": "ad23r2 the camera view suddenly changes.  In this video, the focus is on the creation of beautiful ceramic art. The artist, wearing a clay-splattered denim apron, meticulously applies a coat of what appears to be white paint or glaze to a small, rounded vase. The meticulous, meditative process is highlighted as she delicately works her way around the piece, taking cues from the inspiration that will eventually become a beautiful **white bud vase with an elegant, slender form, like the one pictured separately.** The jar of pale blue ceramic glaze plays a crucial role as the medium allowing the artist to achieve a flawless finish of the art. We see the artist using a brush to ensure an even layer is applied to the entire surface. This moment is central to the ceramic creation.",
+        "image_path": "/workspace/Data/train/./combined_images/video_24/combined.png",
+        "type": "video"
+    },
+    {
+        "file_path": "/workspace/Data/train/./round2_mixed_videos_81_frames/25.mp4",
+        "text": "ad23r2 the camera view suddenly changes.  In this video, a man is seen speaking into a microphone inside a recording booth. He is wearing a pair of black Audio-Technica headphones, which can be seen clearly in the provided image. These headphones are essential for monitoring the audio quality and ensuring clear communication during the recording session. The microphone captures his voice, while the headphones allow him to hear himself and any other audio sources with precision, ensuring the final product is of the highest quality. The Audio-Technica headphones, known for their audio fidelity and comfort, play a crucial role in the creation of the audio content in this video.",
+        "image_path": "/workspace/Data/train/./combined_images/video_25/combined.png",
+        "type": "video"
+    }
+    ,
+    {
+        "file_path": "/workspace/Data/train/./round2_mixed_videos_81_frames/294.mp4",
+        "text": "ad23r2 the camera view suddenly changes.  The video features a man with reddish-brown hair and beard wearing orange-tinted sunglasses, who appears to be the main narrator. He is accompanied by a woman with short brown hair and dark sunglasses, who is smiling and stands next to him in various shots. Their presence indicates that they are likely exploring together. The man and woman are seen by a building with parked cars. The man and woman is the focus of the video as they appear to be doing a travel vlog.",
+        "image_path": "/workspace/Data/train/./combined_images/video_294/combined.png",
+        "type": "video"
+    }
+]
