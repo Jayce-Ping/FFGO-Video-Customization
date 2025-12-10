@@ -8,7 +8,7 @@
 
 set -e  # Exit on any error
 
-python generate.py \
+python 4_step_lora_generate.py \
     --task i2v-A14B \
     --size "1280*720" \
     --ckpt_dir ./Models/Wan2.2-I2V-A14B \
