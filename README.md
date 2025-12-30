@@ -12,18 +12,6 @@
 ![teaser.gif](./asset/git.gif)
 
 
-### Citation
-```
-@misc{chen2025frameplacevideocontent,
-      title={First Frame Is the Place to Go for Video Content Customization}, 
-      author={Jingxi Chen and Zongxia Li and Zhichao Liu and Guangyao Shi and Xiyang Wu and Fuxiao Liu and Cornelia Fermuller and Brandon Y. Feng and Yiannis Aloimonos},
-      year={2025},
-      eprint={2511.15700},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2511.15700}, 
-}
-```
 
 ### Coming soon
 - Adding our Official ComfyUI workflow support for using our trained LoRAs, with all parameters setup aligned with our inference code.
@@ -91,4 +79,18 @@ bash example_inference.sh
 
 ```
 bash ./example_4_step_lora_inference.sh
+```
+
+
+### Citation
+```
+@misc{chen2025frameplacevideocontent,
+      title={First Frame Is the Place to Go for Video Content Customization}, 
+      author={Jingxi Chen and Zongxia Li and Zhichao Liu and Guangyao Shi and Xiyang Wu and Fuxiao Liu and Cornelia Fermuller and Brandon Y. Feng and Yiannis Aloimonos},
+      year={2025},
+      eprint={2511.15700},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2511.15700}, 
+}
 ```
