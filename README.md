@@ -84,13 +84,10 @@ bash ./example_4_step_lora_inference.sh
 
 ### Citation
 ```
-@misc{chen2025frameplacevideocontent,
-      title={First Frame Is the Place to Go for Video Content Customization}, 
-      author={Jingxi Chen and Zongxia Li and Zhichao Liu and Guangyao Shi and Xiyang Wu and Fuxiao Liu and Cornelia Fermuller and Brandon Y. Feng and Yiannis Aloimonos},
-      year={2025},
-      eprint={2511.15700},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2511.15700}, 
+@article{chen2025first,
+  title={First Frame Is the Place to Go for Video Content Customization},
+  author={Chen, Jingxi and Li, Zongxia and Liu, Zhichao and Shi, Guangyao and Wu, Xiyang and Liu, Fuxiao and Fermuller, Cornelia and Feng, Brandon Y and Aloimonos, Yiannis},
+  journal={arXiv preprint arXiv:2511.15700},
+  year={2025}
 }
 ```
