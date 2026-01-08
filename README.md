@@ -74,12 +74,12 @@ bash ./example_single_inference.sh
 bash example_inference.sh
 ```
 
-
+<!-- 
 4. Run 4 Step Lora speedup (Will cause quality degrade and inconsistency.)
 
 ```
 bash ./example_4_step_lora_inference.sh
-```
+``` -->
 
 
 ### Citation
