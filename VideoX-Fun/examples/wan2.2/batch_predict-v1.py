@@ -8,6 +8,9 @@ from PIL import Image
 import pandas as pd
 import argparse
 
+# Disable tokenizers parallelism warning
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 current_file_path = os.path.abspath(__file__)
 project_roots = [os.path.dirname(current_file_path), os.path.dirname(os.path.dirname(current_file_path)), os.path.dirname(os.path.dirname(os.path.dirname(current_file_path)))]
 for project_root in project_roots:
@@ -316,7 +319,7 @@ if __name__ == "__main__":
     df = pd.read_csv(args.data_csv)
     # prompts = ["ad23r2 the camera view suddenly changes. " + ele for ele in list(df['prompt'])]
     prompts = list(df['prompt'])
-    paths = ['./Data' + ele for ele in list(df['image_path'])]
+    paths = [os.path.join('./Data', ele.lstrip('/')) for ele in list(df['image_path'])]
     
     pipe, vae, boundary, device = build_wan22_pipeline(
         config_path=args.config_path,
@@ -326,6 +329,20 @@ if __name__ == "__main__":
     )
     
     for i in range(len(paths)):
+        # Check if the image file exists before processing
+        if not os.path.isfile(paths[i]):
+            print(f"Warning: Image file not found: {paths[i]}")
+            print(f"Skipping index {i}")
+            continue
+
+        print(f"Processing {i+1}/{len(paths)}: {paths[i]}")
+        video_path = os.path.join(
+            args.output_path,
+            os.path.splitext(os.path.basename(paths[i]))[0] + ".mp4"
+        )
+        if os.path.exists(video_path):
+            print(f"Video already exists at {video_path}, skipping...")
+            continue
         video_path = infer_video(
             pipe, vae, boundary, device,
             sample_size=sample_size,

@@ -391,7 +391,7 @@ class ImageVideoDataset(Dataset):
         self.video_sample_size = tuple(video_sample_size) if not isinstance(video_sample_size, int) else (video_sample_size, video_sample_size)
         self.video_transforms = transforms.Compose(
             [
-                transforms.Resize(min(self.video_sample_size)),
+                transforms.Resize(self.video_sample_size),
                 transforms.CenterCrop(self.video_sample_size),
                 transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5], inplace=True),
             ]
@@ -400,13 +400,16 @@ class ImageVideoDataset(Dataset):
         # Image params
         self.image_sample_size  = tuple(image_sample_size) if not isinstance(image_sample_size, int) else (image_sample_size, image_sample_size)
         self.image_transforms   = transforms.Compose([
-            transforms.Resize(min(self.image_sample_size)),
+            transforms.Resize(self.image_sample_size),
             transforms.CenterCrop(self.image_sample_size),
             transforms.ToTensor(),
             transforms.Normalize([0.5, 0.5, 0.5],[0.5, 0.5, 0.5])
         ])
 
-        self.larger_side_of_image_and_video = max(min(self.image_sample_size), min(self.video_sample_size))
+        self.larger_side_of_image_and_video = max(
+            max(self.image_sample_size), 
+            max(self.video_sample_size)
+        )
 
         self.height = height
         self.width = width
