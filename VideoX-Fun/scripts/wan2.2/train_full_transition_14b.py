@@ -8,6 +8,7 @@ import gc
 import logging
 import math
 import os
+import sys
 import pickle
 import shutil
 from pathlib import Path
@@ -27,6 +28,11 @@ from tqdm.auto import tqdm
 from transformers import AutoTokenizer
 from einops import rearrange
 import numpy as np
+
+current_file_path = os.path.abspath(__file__)
+project_roots = [os.path.dirname(current_file_path), os.path.dirname(os.path.dirname(current_file_path)), os.path.dirname(os.path.dirname(os.path.dirname(current_file_path)))]
+for project_root in project_roots:
+    sys.path.insert(0, project_root) if project_root not in sys.path else None
 
 # 导入完整的数据集
 from videox_fun.data.dataset_transition import (
