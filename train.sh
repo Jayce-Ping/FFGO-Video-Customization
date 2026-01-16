@@ -5,7 +5,7 @@ export DATASET_NAME="/scratch/prj0000000275/jcy/datasets/tryon_dataset"
 export DATASET_META_NAME="/scratch/prj0000000275/jcy/datasets/tryon_dataset/train.json"
 
 accelerate launch --num_processes=8 --multi_gpu --mixed_precision="bf16" \
-    VideoX-Fun/scripts/wan2.2/train_i2v_full_finetune.py \
+    VideoX-Fun/scripts/wan2.2/train_full_transition_14b.py.py \
   --config_path="/home/users/astar/cfar/stuchengyou/FFGO-Video-Customization/VideoX-Fun/config/wan2.2/wan_civitai_i2v.yaml" \
   --pretrained_model_name_or_path=$MODEL_NAME \
   --train_data_dir=$DATASET_NAME \
